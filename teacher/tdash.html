@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Teacher Dashboard</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+  </head>
+  <body>
+    <main class="page top dashboard-page">
+      <header class="site-header">
+        <div class="site-inner">
+          <div class="site-brand">SIS</div>
+          <div class="header-actions">
+            <div class="menu-wrap">
+              <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span class="hamburger"></span>
+              </button>
+              <div id="main-menu" class="menu-dropdown">
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="tdash.html">Home</a></li>
+                  <li><a class="nav-link" href="#">Course Management</a></li>
+                  <li><a class="nav-link" href="#">Class Lists</a></li>
+                  <li><a class="nav-link" href="#">Submissions</a></li>
+                  <li><a class="nav-link" href="#">Gradebook</a></li>
+                  <li><a class="nav-link" href="#">Announcements</a></li>
+                  <li><a class="nav-link" href="report.html">Report Submission</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <button id="logout" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="container">
+        <h2>Welcome, <span id="teacher-name">Teacher</span></h2>
+        <div class="dashboard">
+          <div class="main-col">
+            <section class="card teacher-info" aria-labelledby="tinfo-title">
+              <h3 id="tinfo-title">Teacher Information</h3>
+              <div class="row">
+                <div><strong>ID</strong><div id="teacher-id">-</div></div>
+                <div><strong>Dept</strong><div id="teacher-dept">-</div></div>
+                <div><strong>Email</strong><div id="teacher-email">-</div></div>
+              </div>
+            </section>
+
+            <section class="card courses-managed" aria-labelledby="courses-title">
+              <h3 id="courses-title">Courses You Manage</h3>
+              <ul id="courses-managed-list">
+                <!-- populated by JS -->
+              </ul>
+            </section>
+
+            <section class="card class-list" aria-labelledby="classlist-title">
+              <h3 id="classlist-title">Selected Class Roster</h3>
+              <div id="class-roster">
+                <!-- populated by JS when a course selected -->
+              </div>
+            </section>
+          </div>
+
+          <aside class="aside-col">
+            <section class="card recent-submissions" aria-labelledby="submissions-title">
+              <h3 id="submissions-title">Recent Submissions</h3>
+              <ul id="recent-submissions-list">
+                <!-- populated by JS -->
+              </ul>
+            </section>
+
+            
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/header.js"></script>
+    <script src="../assets/teacher.js"></script>
+  </body>
+</html>
