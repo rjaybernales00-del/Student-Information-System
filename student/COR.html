@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Certificate of Registration</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+      .cor-form{max-width:760px;margin:1.5rem auto}
+      .preview{border:1px dashed #e6eefc;padding:1rem;border-radius:8px;background:#fff}
+      .controls{display:flex;gap:0.6rem;align-items:center}
+      .hidden{display:none}
+    </style>
+
+    <header class="site-header">
+        <div class="site-inner">
+          <div class="site-brand">SIS</div>
+          <div class="header-actions">
+            <div class="menu-wrap">
+              <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span class="hamburger"></span>
+              </button>
+              <div id="main-menu" class="menu-dropdown">
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="sdash.html">Home</a></li>
+                  <li><a class="nav-link" href="COR.html">COR</a></li>
+                  <li><a class="nav-link" href="grades.html">Grade Slip</a></li>
+                  <li><a class="nav-link" href="permanent-records.html">Permanent Records</a></li>
+                  <li><a class="nav-link" href="#">Assessment</a></li>
+                  <li><a class="nav-link" href="#">Faculty Evaluation</a></li>
+                  <li><a class="nav-link" href="#">Admission</a></li>
+                  <li><a class="nav-link" href="#">E-library</a></li>
+                  <li><a class="nav-link" href="#">Student Election Voting</a></li>
+                </ul>
+              </div>
+            </div>
+            <button id="logout" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+
+  </head>
+  <body>
+    <main class="page top">
+      
+
+      <section class="container cor-form">
+        <h2>Certificate of Registration (COR)</h2>
+
+        <section class="card">
+          <form id="cor-form">
+            <div class="field">
+              <label for="ay">Academic Year</label>
+              <select id="ay" name="academic_year" required></select>
+            </div>
+
+            <div class="field" style="margin-top:0.6rem">
+              <label for="semester">Semester</label>
+              <select id="semester" name="semester" required>
+                <option value="First Semester">First Semester</option>
+                <option value="Second Semester">Second Semester</option>
+                <option value="Summer">Summer</option>
+              </select>
+            </div>
+
+            <div style="margin-top:0.8rem" class="controls">
+              <button class="btn" type="submit">Generate COR</button>
+              <button id="print-btn" class="btn" type="button" style="display:none;background:#10b981">Print / Download</button>
+            </div>
+          </form>
+
+          <div id="cor-preview" class="preview hidden" style="margin-top:1rem" aria-live="polite">
+            <!-- populated by JS -->
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="../assets/header.js"></script>
+    <script src="../assets/student-cor.js"></script>
+  </body>
+</html>
