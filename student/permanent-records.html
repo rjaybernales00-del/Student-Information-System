@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Permanent Records</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+      .records-table{width:100%;border-collapse:collapse}
+      .records-table th,.records-table td{padding:0.6rem 0.75rem;border-bottom:1px solid #eef2ff;text-align:left}
+      .records-table th{background:linear-gradient(180deg,#fbfdff,#fff);font-weight:700}
+      .student-meta{display:flex;gap:1.5rem;align-items:center;margin-bottom:0.75rem}
+      .student-meta .meta{font-size:0.95rem;color:#374151}
+      .student-meta .meta strong{display:block;color:#111827}
+    </style>
+
+    <header class="site-header">
+        <div class="site-inner">
+          <div class="site-brand">SIS</div>
+          <div class="header-actions">
+            <div class="menu-wrap">
+              <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span class="hamburger"></span>
+              </button>
+              <div id="main-menu" class="menu-dropdown">
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="sdash.html">Home</a></li>
+                  <li><a class="nav-link" href="COR.html">COR</a></li>
+                  <li><a class="nav-link" href="grades.html">Grade Slip</a></li>
+                  <li><a class="nav-link" href="permanent-records.html">Permanent Records</a></li>
+                  <li><a class="nav-link" href="#">Assessment</a></li>
+                  <li><a class="nav-link" href="#">Faculty Evaluation</a></li>
+                  <li><a class="nav-link" href="#">Admission</a></li>
+                  <li><a class="nav-link" href="#">E-library</a></li>
+                  <li><a class="nav-link" href="#">Student Election Voting</a></li>
+                </ul>
+              </div>
+            </div>
+            <button id="logout" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+  </head>
+  <body>
+    <main class="page top">
+      
+
+      <section class="container">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:1rem">
+          <h2>Permanent Records</h2>
+          <button id="print-records-btn" style="width: 5rem;" class="btn" type="button" title="Print Permanent Records">Print</button>
+        </div>
+
+        <section class="card">
+          <div class="student-meta">
+            <div class="meta">
+              <strong>Student ID</strong>
+              <div id="pr-student-id">-</div>
+            </div>
+            <div class="meta">
+              <strong>Student Name</strong>
+              <div id="pr-student-name">-</div>
+            </div>
+          </div>
+
+          <div id="records-container">
+            <!-- JS will render one table per (academic year, semester) group here -->
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <script src="../assets/header.js"></script>
+    <script src="../assets/student-records.js"></script>
+  </body>
+</html>
