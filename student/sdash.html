@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+
+    
+      <header class="site-header">
+        <div class="site-inner">
+          <div class="site-brand">SIS</div>
+          <div class="header-actions">
+            <div class="menu-wrap">
+              <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span class="hamburger"></span>
+              </button>
+              <div id="main-menu" class="menu-dropdown">
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="sdash.html">Home</a></li>
+                  <li><a class="nav-link" href="COR.html">COR</a></li>
+                  <li><a class="nav-link" href="grades.html">Grade Slip</a></li>
+                  <li><a class="nav-link" href="permanent-records.html">Permanent Records</a></li>
+                  <li><a class="nav-link" href="#">Assessment</a></li>
+                  <li><a class="nav-link" href="#">Faculty Evaluation</a></li>
+                  <li><a class="nav-link" href="#">Admission</a></li>
+                  <li><a class="nav-link" href="#">E-library</a></li>
+                  <li><a class="nav-link" href="#">Student Election Voting</a></li>
+                </ul>
+              </div>
+            </div>
+            <button id="logout" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+  </head>
+  <body>
+    
+    <main class="page top dashboard-page">
+      <section class="container" style="margin-bottom: 0;">
+        <h2>Welcome, <span id="student-name">Student</span></h2>
+
+        <!-- main nav removed; hamburger dropdown used instead -->
+
+        <div class="dashboard" style="margin-top: 0;">
+          <div class="main-col">
+            <section class="card student-info" aria-labelledby="info-title">
+              <h3 id="info-title">Student Information</h3>
+              <div class="row">
+                <div><strong>ID</strong><div id="student-id">-</div></div>
+                <div><strong>Major</strong><div id="student-major">-</div></div>
+                <div><strong>Year</strong><div id="student-year">-</div></div>
+              </div>
+              <p id="student-email">-</p>
+            </section>
+
+            <section class="card courses" aria-labelledby="courses-title">
+              <h3 id="courses-title">Enrolled Courses</h3>
+              <ul id="courses-list">
+                <!-- populated by JS -->
+              </ul>
+            </section>
+
+          </div>
+
+          <aside class="aside-col">
+            <section class="card assignments" aria-labelledby="assignments-title">
+              <h3 id="assignments-title">Upcoming Assignments</h3>
+              <ul id="assignments-list">
+                <!-- populated by JS -->
+              </ul>
+            </section>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/header.js"></script>
+    <script src="../assets/student.js"></script>
+  </body>
+</html>
