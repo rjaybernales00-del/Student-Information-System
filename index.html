@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Student Information System — Login</title>
+		<link rel="stylesheet" href="assets/styles.css">
+	</head>
+	<body>
+		<main class="page">
+			<section class="login-container" aria-labelledby="login-title">
+				<h1 id="login-title" class="brand">Student Information System</h1>
+
+				<form class="login-form" action="#" method="post" autocomplete="on">
+					
+                    <div class="field">
+						<label for="role">Account type</label>
+						<select id="role" name="role" required>
+							<option value="student">Student</option>
+							<option value="teacher">Teacher</option>
+						</select>
+					</div>
+                    
+                    <div class="field">
+						<label for="student-id">Student ID or Email</label>
+						<input id="student-id" name="student_id" type="text" inputmode="email" required placeholder="e.g. s123456@school.edu">
+					</div>
+
+					<div class="field">
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" required placeholder="Enter your password">
+					</div>
+
+					<div class="options">
+						<label class="remember">
+							<input type="checkbox" name="remember"> Remember me
+						</label>
+					</div>
+
+					<div id="message" class="message" role="alert" aria-live="polite"></div>
+
+					<button class="btn" type="submit">Sign In</button>
+				</form>
+
+
+				<!-- Accounts are centralized with admin; choose account type above -->
+
+				<script src="assets/login.js"></script>
+			</section>
+		</main>
+	</body>
+</html>
