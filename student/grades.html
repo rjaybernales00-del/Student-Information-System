@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Grade Slip</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <style>
+
+      /* ensure left controls smaller and right preview larger */
+      .grades-layout{display:grid;grid-template-columns:360px 1fr;gap:1rem;align-items:start;margin-top:1rem}
+      .controls .field{margin-bottom:0.6rem}
+      .grades-preview{min-height:320px}
+      
+    </style>
+    <header class="site-header">
+        <div class="site-inner">
+          <div class="site-brand">SIS</div>
+          <div class="header-actions">
+            <div class="menu-wrap">
+              <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu" aria-label="Open menu">
+                <span class="hamburger"></span>
+              </button>
+              <div id="main-menu" class="menu-dropdown">
+                <ul class="nav-list">
+                  <li><a class="nav-link" href="sdash.html">Home</a></li>
+                  <li><a class="nav-link" href="COR.html">COR</a></li>
+                  <li><a class="nav-link" href="grades.html">Grade Slip</a></li>
+                  <li><a class="nav-link" href="permanent-records.html">Permanent Records</a></li>
+                  <li><a class="nav-link" href="#">Assessment</a></li>
+                  <li><a class="nav-link" href="#">Faculty Evaluation</a></li>
+                  <li><a class="nav-link" href="#">Admission</a></li>
+                  <li><a class="nav-link" href="#">E-library</a></li>
+                  <li><a class="nav-link" href="#">Student Election Voting</a></li>
+                </ul>
+              </div>
+            </div>
+            <button id="logout" class="logout-btn">Logout</button>
+          </div>
+        </div>
+      </header>
+      
+  </head>
+  <body>
+    <main class="page top">
+      <section class="container">
+        <h2>Grade Slip</h2>
+
+        <div class="grades-layout">
+          <aside class="card controls">
+            <form id="grades-form">
+              <div class="field">
+                <label for="ay">Academic Year</label>
+                <select id="ay" name="academic_year" required></select>
+              </div>
+
+              <div class="field">
+                <label for="semester">Semester</label>
+                <select id="semester" name="semester" required>
+                  <option value="First Semester">First Semester</option>
+                  <option value="Second Semester">Second Semester</option>
+                  <option value="Summer">Summer</option>
+                </select>
+              </div>
+
+              <div style="margin-top:0.6rem;display:flex;gap:0.6rem">
+                <button class="btn" type="submit">Generate Grade Slip</button>
+                <button id="print-btn" class="btn" type="button" style="background:#10b981;display:none">Print / Download</button>
+              </div>
+            </form>
+          </aside>
+
+          <section class="card grades-preview" id="grade-preview" aria-live="polite" style="margin-top: 0;">
+            <p class="muted">Select Academic Year and Semester then click <strong>Generate Grade Slip</strong>.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="../assets/header.js"></script>
+    <script src="../assets/student-grades.js"></script>
+  </body>
+</html>
